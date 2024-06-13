@@ -1,10 +1,10 @@
 <template>
   <VApp>
     <VMain>
-      <v-app class="background-app h-100">
+      <v-app class="background-app">
         <Header />
         <slot />
-        <Footer class="footer-app" />
+        <Footer class="footer-app pb-0" />
       </v-app>
     </VMain>
   </VApp>
@@ -27,6 +27,7 @@ body {
   width: 100%;
   height: 100px;
   position: absolute;
+  padding-top: 1000px;
   bottom: 0;
   left: 0;
 }

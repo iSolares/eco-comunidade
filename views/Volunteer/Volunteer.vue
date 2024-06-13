@@ -58,7 +58,7 @@
                 type="submit"
                 elevation="4"
                 variant="elevated"
-                color="#3C3A8C"
+                color="#A2A644"
                 class="px-8 text-capitalize"
                 dark
                 @click="register()"

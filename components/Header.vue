@@ -1,45 +1,37 @@
 <template>
-  <v-navigation-drawer class="v-navigation-drawer" v-model="isOpenMenu">
-    <v-list-subheader class="mt-3 text-h6 text-black">
+  <v-navigation-drawer
+    color="#A2A644"
+    :border="false"
+    class="v-navigation-drawer fixed"
+    v-model="isOpenMenu"
+    temporary
+  >
+    <v-list-subheader class="mt-3 text-h6 text-white">
       <div class="justify-center align-center">
-        <v-app-bar-nav-icon
-          class="mt-0"
-          @click="(isOpenMenu = !isOpenMenu), (openMenu2 = !openMenu2)"
-        />Eco Comunidade
+        <v-app-bar-nav-icon class="mt-0" @click="isOpenMenu = !isOpenMenu" />Eco
+        Comunidade
       </div>
     </v-list-subheader>
     <v-list>
+      <v-list-item class="text-start" @click="navigateTo('/Home')">
+        Home
+      </v-list-item>
       <v-list-item class="text-start" @click="navigateTo('/About')">
         About
       </v-list-item>
       <v-list-item class="text-start" @click="navigateTo('/Contact')">
         Contact
       </v-list-item>
-      <v-list-item class="text-start" @click="navigateTo('/EventDetails')">
-        Event Details
-      </v-list-item>
-      <v-list-item class="text-start" @click="navigateTo('/Events')">
-        Events
-      </v-list-item>
-      <v-list-item class="text-start" @click="navigateTo('/Home')">
-        Home
-      </v-list-item>
-      <v-list-item class="text-start" @click="navigateTo('/ProjectDetails')">
-        Project Details
-      </v-list-item>
-      <v-list-item class="text-start" @click="navigateTo('/Projects')">
-        Projects
-      </v-list-item>
       <v-list-item class="text-start" @click="navigateTo('/Volunteer')">
         Volunteer
       </v-list-item>
+      <v-list-item class="text-start" @click="navigateTo('/Map')">
+        Maps
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
-  <v-app-bar>
-    <v-app-bar-nav-icon
-      v-show="openMenu2"
-      @click="(isOpenMenu = !isOpenMenu), (openMenu2 = !openMenu2)"
-    ></v-app-bar-nav-icon>
+  <v-app-bar class="fixed" color="#A2A644">
+    <v-app-bar-nav-icon @click="isOpenMenu = !isOpenMenu"></v-app-bar-nav-icon>
     <v-row class="justify-space-between">
       <v-col class="px-0">
         <p class="my-5 text-center text-h6">Eco Comunidade</p>
@@ -56,10 +48,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const nameUser = ref("");
-const admin = useCookie("userAdmin");
 let isOpenMenu = ref(false);
-let openMenu2 = ref(true);
 </script>
 <style scoped>
 @media screen and (max-width: 350px) {
@@ -69,5 +58,9 @@ let openMenu2 = ref(true);
 }
 .v-navigation-drawer {
   border-right-width: inherit;
+}
+
+.fixed {
+  position: fixed !important;
 }
 </style>
