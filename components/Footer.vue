@@ -1,13 +1,15 @@
 <template>
   <footer>
-    <p class="text-white">
-      © 2024 EcoComunidade. Todos os direitos reservados.
-    </p>
-    <p>
-      <a class="text-white" href="mailto:contato@ecocomunidade.org"
-        >contato@ecocomunidade.org</a
-      >
-    </p>
+    <div class="mt-3">
+      <p class="text-white">
+        © 2024 EcoComunidade. Todos os direitos reservados.
+      </p>
+      <p>
+        <a class="text-white" href="mailto:contato@ecocomunidade.org"
+          >contato@ecocomunidade.org</a
+        >
+      </p>
+    </div>
   </footer>
 </template>
 

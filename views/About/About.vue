@@ -1,7 +1,51 @@
 <template>
-  <v-row align="center" class="pa-0">
+  <v-navigation-drawer
+    color="#A2A644"
+    :border="false"
+    class="v-navigation-drawer fixed"
+    v-model="isOpenMenu"
+    temporary
+  >
+    <v-list-subheader class="mt-3 text-h6 text-white">
+      <div class="justify-center align-center">
+        <v-app-bar-nav-icon class="mt-0" @click="isOpenMenu = !isOpenMenu" />Eco
+        Comunidade
+      </div>
+    </v-list-subheader>
+    <v-list>
+      <v-list-item class="text-start" @click="navigateTo('/Home')">
+        Home
+      </v-list-item>
+      <v-list-item class="text-start" @click="navigateTo('/About')">
+        About
+      </v-list-item>
+      <v-list-item class="text-start" @click="navigateTo('/Contact')">
+        Contact
+      </v-list-item>
+      <v-list-item class="text-start" @click="navigateTo('/Volunteer')">
+        Volunteer
+      </v-list-item>
+      <v-list-item class="text-start" @click="navigateTo('/Map')">
+        Maps
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+  <v-app-bar class="fixed" color="#A2A644">
+    <v-app-bar-nav-icon @click="isOpenMenu = !isOpenMenu"></v-app-bar-nav-icon>
+    <v-row class="justify-space-between">
+      <v-col class="px-0">
+        <p class="my-5 text-center text-h6">Eco Comunidade</p>
+      </v-col>
+      <v-col class="d-flex align-center pl-0 mr-3" cols="auto">
+        <v-avatar size="50">
+          <img cover width="50" src="/assets/imgs/Avatar3.jpeg" />
+        </v-avatar>
+      </v-col>
+    </v-row>
+  </v-app-bar>
+  <v-row align="center" class="mt-16">
     <v-col cols="12" class="">
-      <v-row justify="center" class="mt-10" align="center">
+      <v-row justify="center" class="my-auto" align="center">
         <v-col cols="auto" class="pt-0" xs="12" sm="12" md="6" lg="6">
           <v-card
             color="#A2A644"
@@ -108,6 +152,26 @@
       </v-row>
     </v-col>
   </v-row>
+  <footer>
+    <p class="text-white">
+      © 2024 EcoComunidade. Todos os direitos reservados.
+    </p>
+    <p>
+      <a class="text-white" href="mailto:contato@ecocomunidade.org"
+        >contato@ecocomunidade.org</a
+      >
+    </p>
+  </footer>
 </template>
 
-<script setup></script>
+<script setup>
+const isOpenMenu = ref(false);
+</script>
+
+<style scoped>
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #a2a644;
+}
+</style>
