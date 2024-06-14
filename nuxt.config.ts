@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
+  routeRules: {
+    "/": { redirect: "/Home" },
+  },
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
@@ -12,7 +15,6 @@ export default defineNuxtConfig({
       });
     },
     "nuxt3-leaflet",
-    //...
   ],
   vite: {
     vue: {
