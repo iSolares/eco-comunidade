@@ -4,7 +4,6 @@
       <v-app class="background-app">
         <Header />
         <slot />
-        <Footer class="footer-app pb-0" />
       </v-app>
     </VMain>
   </VApp>
@@ -12,7 +11,6 @@
 
 <script setup>
 import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
 </script>
 
 <style>

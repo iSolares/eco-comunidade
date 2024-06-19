@@ -18,6 +18,9 @@
       </v-card>
     </v-col>
   </v-row>
+  <Footer />
 </template>
 
-<script setup></script>
+<script setup>
+import Footer from "~/components/Footer.vue";
+</script>

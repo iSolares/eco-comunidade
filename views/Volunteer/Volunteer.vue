@@ -71,21 +71,11 @@
       </v-form>
     </v-col>
   </v-row>
+  <Footer />
 </template>
 
 <script setup>
-import { reactive } from "vue";
-
-const form = reactive({
-  name: "",
-  email: "",
-  skills: "",
-});
-
-function submitForm() {
-  // Lógica para envio do formulário de voluntariado
-  alert("Formulário de voluntariado enviado!");
-}
+import Footer from "~/components/Footer.vue";
 </script>
 
 <style scoped>

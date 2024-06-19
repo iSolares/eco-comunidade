@@ -67,9 +67,11 @@
       </v-form>
     </v-col>
   </v-row>
+  <Footer />
 </template>
 
 <script setup>
+import Footer from "~/components/Footer.vue";
 const email = ref("");
 const nome = ref("");
 const celular = ref("");

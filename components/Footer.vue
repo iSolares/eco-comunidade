@@ -18,6 +18,7 @@
 <style scoped>
 /* Estilos para o rodapé */
 footer {
+  bottom: 0;
   text-align: center;
   padding: 20px;
   background-color: #a2a644;

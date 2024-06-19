@@ -3,7 +3,7 @@
     <v-col cols="12">
       <LMap
         ref="map"
-        style="height: 85%; margin-top: 65px"
+        style="height: 95%; margin-top: 65px"
         :zoom="zoom"
         :center="[-12.940867721430083, -38.43458550213431]"
       >
@@ -18,9 +18,11 @@
       </LMap>
     </v-col>
   </v-row>
+  <Footer class="mt-4" />
 </template>
 
 <script setup lang="ts">
+import Footer from "~/components/Footer.vue";
 const zoom = ref(12);
 </script>
 
