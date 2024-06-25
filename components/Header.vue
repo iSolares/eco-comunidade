@@ -17,13 +17,13 @@
         Home
       </v-list-item>
       <v-list-item class="text-start" @click="navigateTo('/About')">
-        About
+        Sobre nós
       </v-list-item>
       <v-list-item class="text-start" @click="navigateTo('/Contact')">
-        Contact
+        Contato
       </v-list-item>
       <v-list-item class="text-start" @click="navigateTo('/Volunteer')">
-        Volunteer
+        Voluntário
       </v-list-item>
       <v-list-item class="text-start" @click="navigateTo('/Map')">
         Maps
